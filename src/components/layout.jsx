@@ -2,6 +2,7 @@ import React from 'react';
 import styled, {ThemeProvider} from 'styled-components';
 import "../styles/global.css"
 import Header from './header';
+import Footer from './footer';
 
 const theme = {
     primaryColors:{        
@@ -13,7 +14,8 @@ const theme = {
         white:"#fff",
         orange: "#ffaa01",
         blue: "#1faeff",
-        lightGrey: "#EFEFEF"
+        lightGrey: "#EFEFEF",
+        green:"#00dba1"
     },
     breakPoints:{
         xs: "0",
@@ -36,6 +38,7 @@ const Layout = ({children})=>{
             <LayoutWrapper>
                 {children}
             </LayoutWrapper>
+        <Footer></Footer>
         </ThemeProvider>
     )
 };
