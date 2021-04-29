@@ -3,12 +3,12 @@ import styled from 'styled-components'
 import {Link} from 'gatsby'
 
 const Card = styled.div`
--webkit-box-shadow: 0px 0px 9px -1px rgba(0,0,0,0.3); 
-box-shadow: 0px 0px 9px -1px rgba(0,0,0,0.3);
 background:${props=>props.theme.secondaryColors.white};
 display:flex;
 transition:500ms;
 flex-flow:column;
+-webkit-box-shadow: 0px 0px 9px -1px rgba(0,0,0,0.3); 
+box-shadow: 0px 0px 9px -1px rgba(0,0,0,0.3);
 &:hover{
     -webkit-box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.5); 
     box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.5);
@@ -62,6 +62,7 @@ transition:300ms;
 `
 const Module = (props) => {
     return (
+        
         <Card>
             <img src={props.bannerImg} alt={props.imgAlt}/>
             <ContentRow>

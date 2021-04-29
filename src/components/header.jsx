@@ -78,9 +78,15 @@ cursor:pointer;
 }
 `
 
+const MobileMenu = styled.div`
+display:none;
+transition:500ms;
+`
+
 const Header = () => {
     const [toggle, setToggle] = useState(false);
     return (
+        <React.Fragment>
         <Container>
             <Link to="/">
             <img src={Logo} alt="Brain Corp logo"/></Link>
@@ -98,6 +104,15 @@ const Header = () => {
                 <span className={`bottom-bar ${toggle ? "bottom-active" : ""}`}></span>
             </Toggle>
         </Container>
+        <MobileMenu style={{display: toggle ? "block" : "none"}}>
+            <ul>
+            <li><Link to="/floor-care">Floor Care</Link></li>
+                <li><Link to="/delivery">Delivery</Link></li>
+                <li><a href="https://braincorporation.invisionapp.com/console/share/4R2EQ73TG2" rel="noreferrer noopener" target="_blank">Fleet Management</a></li>
+                <li><a href="https://www.braincorp.com/" rel="noreferrer noopener" target="_blank">Coming Soon</a></li>
+            </ul>
+        </MobileMenu>
+        </React.Fragment>
     )
 };
 export default Header

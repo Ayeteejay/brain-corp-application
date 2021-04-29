@@ -3,6 +3,7 @@ import styled, {ThemeProvider} from 'styled-components';
 import "../styles/global.css"
 import Header from './header';
 import Footer from './footer';
+import Fade from 'react-reveal';
 
 const theme = {
     primaryColors:{        
@@ -36,7 +37,9 @@ const Layout = ({children})=>{
         <ThemeProvider theme={theme}>
             <Header></Header>
             <LayoutWrapper>
+                <Fade>
                 {children}
+                </Fade>
             </LayoutWrapper>
         <Footer></Footer>
         </ThemeProvider>
