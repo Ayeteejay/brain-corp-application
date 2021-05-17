@@ -16,7 +16,8 @@ const theme = {
         orange: "#ffaa01",
         blue: "#1faeff",
         lightGrey: "#EFEFEF",
-        green:"#00dba1"
+        green:"#00dba1",
+        darkGrey:"#A2A2A2",
     },
     breakPoints:{
         xs: "0",
